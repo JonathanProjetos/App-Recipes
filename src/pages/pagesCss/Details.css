@@ -151,6 +151,11 @@
   width: 360px;
 }
 
+.buttonRecipe:disabled {
+  background-color: var(--secondaryTXTColor);
+  color: var(--textColor);
+}
+
 .divDrinks {
   background-color: #333;
   display: inline-block;

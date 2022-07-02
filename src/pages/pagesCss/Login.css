@@ -3,9 +3,9 @@
   background-image: url('../../images/AppLogin2.jpg');
   display: flex;
   flex-flow: column nowrap;
-  height: 640px;
+  height: 100vh;
   justify-content: center;
-  width: 360px;
+  width: 100vw;
 }
 
 .nameApp {
