@@ -7,7 +7,7 @@ import IngredientCardCheckbox from '../components/Cards/IngredientCardCheckbox';
 import './pagesCss/Details.css';
 
 function RecipeDrinks() {
-  const { detailDrink, setIdUrl, done } = useContext(ProductDetailsContext);
+  const { detailDrink, setIdUrl } = useContext(ProductDetailsContext);
   const [measure, setMeasures] = useState([]);
   const [getLocalStorage, setGetLocalStorage] = useState([]);
   const [ingredientesData, setingreditentesData] = useState([]);
@@ -37,6 +37,7 @@ function RecipeDrinks() {
   }, [detailDrink]);
 
   useEffect(() => {
+    setDoneRecipeDrink(JSON.parse(localStorage.getItem('doneRecipes')) || []);
     if (!localStorage.getItem('inProgressRecipes')) {
       localStorage.setItem(
         'inProgressRecipes', JSON.stringify({ cocktails: { [id]: [] } }),
@@ -106,7 +107,8 @@ function RecipeDrinks() {
       doneDate: date,
       tags: [detailDrink.strTags],
     };
-    localStorage.setItem('doneRecipes', JSON.stringify([...done, recipeDrinks]));
+    localStorage.setItem('doneRecipes', JSON
+      .stringify([...doneRecipeDrink, recipeDrinks]));
     delete objLocalStorage.cocktails;
     localStorage.setItem('inProgressRecipes', JSON.stringify(objLocalStorage));
     setDoneRecipeDrink([...doneRecipeDrink, recipeDrinks]);

@@ -7,7 +7,7 @@ import IngredientCardCheckbox from '../components/Cards/IngredientCardCheckbox';
 import './pagesCss/Details.css';
 
 function RecipeFoods() {
-  const { detailFood, setIdUrl, done } = useContext(ProductDetailsContext);
+  const { detailFood, setIdUrl /* done */ } = useContext(ProductDetailsContext);
   const [measure, setMeasures] = useState([]);
   const [getLocalStorage, setGetLocalStorage] = useState([]);
   const [ingredientesData, setingreditentesData] = useState([]);
@@ -37,6 +37,7 @@ function RecipeFoods() {
   }, [detailFood]);
 
   useEffect(() => {
+    setDoneRecipesfood(JSON.parse(localStorage.getItem('doneRecipes')) || []);
     if (!localStorage.getItem('inProgressRecipes')) {
       localStorage.setItem('inProgressRecipes', JSON.stringify({ meals: { [id]: [] } }));
     } else {
@@ -103,12 +104,12 @@ function RecipeFoods() {
       doneDate: date,
       tags: [detailFood.strTags],
     };
-    localStorage.setItem('doneRecipes', JSON.stringify([...done, recipeFood]));
+    console.log(doneRecipesFood);
+    localStorage.setItem('doneRecipes', JSON.stringify([...doneRecipesFood, recipeFood]));
     delete objLocalStorage.meals;
     localStorage.setItem('inProgressRecipes', JSON.stringify(objLocalStorage));
     setDoneRecipesfood([...doneRecipesFood, recipeFood]);
   };
-  console.log('getlocal', getLocalStorage);
 
   return (
     <section>
