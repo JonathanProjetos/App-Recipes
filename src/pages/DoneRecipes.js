@@ -13,7 +13,6 @@ function DoneRecipes() {
   useEffect(() => {
     const Recipes = JSON.parse(localStorage.getItem('doneRecipes'));
     setDoneRecipes(Recipes);
-    console.log(Recipes);
   }, []);
 
   const onClickShare = (type, id) => {

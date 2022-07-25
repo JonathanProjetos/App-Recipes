@@ -148,12 +148,7 @@
   justify-content: center;
   left: 0;
   position: fixed;
-  width: 360px;
-}
-
-.buttonRecipe:disabled {
-  background-color: var(--secondaryTXTColor);
-  color: var(--textColor);
+  width: 100%;
 }
 
 .divDrinks {
@@ -172,4 +167,9 @@
   background-color: var(--buttonColor);
   margin: 2px;
   padding: 5px;
+}
+
+.buttonRecipe:disabled {
+  background-color: var(--secondaryTXTColor);
+  color: var(--textColor);
 }

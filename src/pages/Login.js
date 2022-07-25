@@ -7,8 +7,8 @@ import './pagesCss/Login.css';
 function Login() {
   const history = useHistory();
   const [user, setUser] = useState({
-    email: '',
-    password: '',
+    email: 'teste@teste.com',
+    password: '12345678',
   });
   const validateEmail = /\S+@\S+\.\S+/;
   const MIN_LENGTH_PASSWORD = 7;
