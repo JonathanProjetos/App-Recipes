@@ -33,8 +33,9 @@ npm install
   ```
 
 ## Executando Testes
-
+* Os test estão em construção!
 * Para rodar todos os testes:
 
   ```
     npm test
+
