@@ -1,9 +1,9 @@
 # App-Recipes
 
 # Contexto
-Esta e uma aplicação front-end para consulta de receitas de comidas ou bebidas, nesta aplicação e possível acompanhar, filtrar e excluir receitas selecionadas, tambem é possível pesquisar uma receita pelo ingrediente  e também por nacionalidade, a aplicação também conta com uma funcionalidade que possibilita pega uma receita surpresa que é caracterizada por uma recita aleatória.
+Esta é uma aplicação front-end para consulta de receitas de comidas ou bebidas. Nesta aplicação, é possível acompanhar, filtrar e excluir receitas selecionadas. Também é possível pesquisar uma receita pelo ingrediente e também por nacionalidade. A aplicação também conta com uma funcionalidade que possibilita pegar uma receita surpresa, que é caracterizada por uma receita aleatória.
 
-Projeto realizado em grupo, aplicando os conceitos de métodos ágeis, autogestão e muita comunicação.
+O projeto foi realizado em grupo, aplicando os conceitos de métodos ágeis, autogestão e muita comunicação.
 
 ## Observações
 ### Acesso pelo computador
